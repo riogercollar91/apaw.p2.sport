@@ -56,7 +56,7 @@ public class Dispatcher {
 			String sport = request.getBody();
 			try {
 //				sportResource.createSport(Integer.valueOf(userId), Integer.valueOf(sport));
-			    sportResource.createSport(1, Integer.valueOf(sport));
+			    sportResource.createSport(sport);
 				response.setStatus(HttpStatus.CREATED);
 			} catch (Exception e) {
 				responseError(response, e);

@@ -17,7 +17,7 @@ public class ApiArchitectureMain {
 		IO.getIO().println("GET **/users");
 		IO.getIO().println("POST **/users   body=\"userName\"");
 		IO.getIO().println("GET **/users/{id}/overage");
-		IO.getIO().println("POST **/sports   body=\"userId:sport\"");
+		IO.getIO().println("POST **/sports   body=\"sport\"");
 		IO.getIO().println("GET **/sports");
 	}
 
@@ -40,6 +40,7 @@ public class ApiArchitectureMain {
         this.request();
         
         //POST
+        request.setMethod(HttpMethod.POST);
         request.setPath("sports");
         request.setBody("tenis");
         this.request();
@@ -48,25 +49,6 @@ public class ApiArchitectureMain {
         request.setBody("ajedrez");
         this.request();
         
-        //GET
-        request.setMethod(HttpMethod.GET);
-        request.setPath("users/search?sport=tenis");
-        request.clearQueryParams();
-        request.setBody("");
-        this.request();
-//      request.setPath("users");
-//      this.request();
-//      request.setPath("users/1/overage");
-//      this.request();
-//      request.setPath("users/2/overage");
-//      this.request();
-        
-
-//		request.setBody("2:6");
-//		this.request();
-        
-
-		
 		//PUT
         request.setMethod(HttpMethod.PUT);
 		request.setPath("users/uno/sport");
@@ -83,18 +65,19 @@ public class ApiArchitectureMain {
         this.request();
         
         
+        //GET
+        request.setMethod(HttpMethod.GET);
+        request.setPath("users/search?sport=tenis");
+        request.clearQueryParams();
+        request.setBody("");
+        this.request();
         
-		//Exceptions
-//		request.setPath("noValid");
-//		this.request();
-//		request.setPath("users/x/overage");
-//		this.request();
-//		request.setPath("users/99/overage");
-//		this.request();
-//		request.setMethod(HttpMethod.POST);
-//		request.setPath("sports");
-//		request.setBody("99:4");
-//		this.request();
+        
+        //POST
+        request.setMethod(HttpMethod.POST);
+        request.setPath("noPatch");
+        request.setBody("");
+        this.request();
 	}
 
 	public void httpMethod() {

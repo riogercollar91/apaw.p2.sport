@@ -10,10 +10,10 @@ import es.upm.miw.apiArchitectureUser.wrappers.SportWrapper;
 
 public class SportController {
 
-	public boolean createSport(int userId, int sport) {
-		User user = DaoFactory.getFactory().getUserDao().read(userId);
+	public boolean createSport(String sport) {
+		User user = DaoFactory.getFactory().getUserDao().read(1);
 		if (user != null) {
-			DaoFactory.getFactory().getSportDao().create(new Sport(sport, user));
+			DaoFactory.getFactory().getSportDao().create(new Sport());
 			return true;
 		} else {
 			return false;
