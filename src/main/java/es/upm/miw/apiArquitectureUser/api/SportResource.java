@@ -13,7 +13,7 @@ public class SportResource {
 			throw new InvalidSportException("" + sport);
 		}
 		if (!new SportController().createSport(userId, sport)) {
-			throw new NotFoundThemeIdException("" + userId);
+			throw new NotFoundUserIdException("" + userId);
 		}
 	}
 
