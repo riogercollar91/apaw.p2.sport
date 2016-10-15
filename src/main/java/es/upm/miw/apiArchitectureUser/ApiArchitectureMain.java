@@ -1,4 +1,4 @@
-package es.upm.miw.apiArquitectureUser;
+package es.upm.miw.apiArchitectureUser;
 
 import es.upm.miw.apiArchitectureUser.daos.DaoFactory;
 import es.upm.miw.apiArchitectureUser.daos.memory.DaoFactoryMemory;

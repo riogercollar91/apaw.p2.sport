@@ -8,7 +8,7 @@ public class UserListWrapper {
 
 	
 	public UserListWrapper() {
-	    userList = new ArrayList<>();
+	    userList = new ArrayList<UserWrapper>();
 	}
 
 	public List<UserWrapper> getUserList() {

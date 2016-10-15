@@ -1,4 +1,4 @@
-package es.upm.miw.apiArquitectureUser;
+package es.upm.miw.apiArchitectureUser;
 
 import es.upm.miw.web.http.HttpRequest;
 import es.upm.miw.web.http.HttpResponse;

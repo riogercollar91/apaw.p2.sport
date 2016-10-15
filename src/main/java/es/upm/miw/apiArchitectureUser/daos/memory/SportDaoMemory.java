@@ -26,7 +26,7 @@ public class SportDaoMemory extends GenericMemoryDao<Sport> implements SportDao 
 	@Override
 	public List<Integer> findValueByUserId(int userId) {
 		List<Sport> sports = this.findAll();
-		List<Integer> sportsValue = new ArrayList<>();
+		List<Integer> sportsValue = new ArrayList<Integer>();
 		for (Sport sport : sports) {
 			if (sport.getUser().getId() == userId) {
 			    sportsValue.add(sport.getValue());

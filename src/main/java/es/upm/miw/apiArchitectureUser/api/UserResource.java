@@ -1,4 +1,4 @@
-package es.upm.miw.apiArquitectureUser.api;
+package es.upm.miw.apiArchitectureUser.api;
 
 import es.upm.miw.apiArchitectureUser.controllers.UserController;
 import es.upm.miw.apiArchitectureUser.exceptions.InvalidUserFieldException;

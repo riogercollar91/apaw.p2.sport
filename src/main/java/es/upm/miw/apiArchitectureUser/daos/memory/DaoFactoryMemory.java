@@ -1,8 +1,8 @@
 package es.upm.miw.apiArchitectureUser.daos.memory;
 
 import es.upm.miw.apiArchitectureUser.daos.DaoFactory;
-import es.upm.miw.apiArchitectureUser.daos.UserDao;
 import es.upm.miw.apiArchitectureUser.daos.SportDao;
+import es.upm.miw.apiArchitectureUser.daos.UserDao;
 
 public class DaoFactoryMemory extends DaoFactory {
 

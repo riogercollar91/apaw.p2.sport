@@ -1,4 +1,4 @@
-package es.upm.miw.apiArquitectureUser.controllers;
+package es.upm.miw.apiArchitectureUser.controllers;
 
 import java.util.List;
 

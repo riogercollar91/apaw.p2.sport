@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SportListWrapper {
-	List<SportWrapper> sportList = new ArrayList<>();
+	List<SportWrapper> sportList = new ArrayList<SportWrapper>();
 
 	public SportListWrapper() {
 	}

@@ -1,9 +1,9 @@
-package es.upm.miw.apiArquitectureUser;
+package es.upm.miw.apiArchitectureUser;
 
-import es.upm.miw.apiArquitectureUser.api.UserResource;
-import es.upm.miw.apiArquitectureUser.api.SportResource;
-import es.upm.miw.apiArquitectureUser.exceptions.InvalidRequestException;
-import es.upm.miw.apiArquitectureUser.exceptions.InvalidUserFieldException;
+import es.upm.miw.apiArchitectureUser.api.SportResource;
+import es.upm.miw.apiArchitectureUser.api.UserResource;
+import es.upm.miw.apiArchitectureUser.exceptions.InvalidRequestException;
+import es.upm.miw.apiArchitectureUser.exceptions.InvalidUserFieldException;
 import es.upm.miw.web.http.HttpRequest;
 import es.upm.miw.web.http.HttpResponse;
 import es.upm.miw.web.http.HttpStatus;
@@ -54,7 +54,7 @@ public class Dispatcher {
 			String userId = request.getBody().split(":")[0];
 			String sport = request.getBody().split(":")[1];
 			try {
-				sportResource.createUser(Integer.valueOf(userId), Integer.valueOf(sport));
+				sportResource.createSport(Integer.valueOf(userId), Integer.valueOf(sport));
 				response.setStatus(HttpStatus.CREATED);
 			} catch (Exception e) {
 				responseError(response, e);
