@@ -23,7 +23,7 @@ public class Dispatcher {
 		if ("users".equals(request.getPath())) {
 			response.setBody(userResource.userList().toString());
 			// **/users/{id}/overage
-		} else if ("users".equals(request.paths()[0]) && "overage".equals(request.paths()[2])) {
+		} else if ("users".equals(request.paths()[0])) {
 			try {
 				response.setBody(userResource.userOverage(Integer.valueOf(request.paths()[1])).toString());
 			} catch (Exception e) {
@@ -51,10 +51,12 @@ public class Dispatcher {
 			break;
 		// POST sports body="userId:sport"
 		case "sports":
-			String userId = request.getBody().split(":")[0];
-			String sport = request.getBody().split(":")[1];
+//			String userId = request.getBody().split(":")[0];
+//			String sport = request.getBody().split(":")[1];
+			String sport = request.getBody();
 			try {
-				sportResource.createSport(Integer.valueOf(userId), Integer.valueOf(sport));
+//				sportResource.createSport(Integer.valueOf(userId), Integer.valueOf(sport));
+			    sportResource.createSport(1, Integer.valueOf(sport));
 				response.setStatus(HttpStatus.CREATED);
 			} catch (Exception e) {
 				responseError(response, e);

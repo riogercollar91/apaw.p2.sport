@@ -22,43 +22,79 @@ public class ApiArchitectureMain {
 	}
 
 	public void demo() {
+	    //POST
 		request.setMethod(HttpMethod.POST);
 		request.setPath("users");
-		request.setBody("uno");
+		request.setBody("uno:uno@gmail.com");
 		this.request();
-		request.setBody("dos");
+		request.setBody("dos:dos@gmail.com");
 		this.request();
-		request.setPath("sports");
-		request.setBody("1:4");
-		this.request();
-		request.setBody("1:5");
-		this.request();
-		request.setBody("2:5");
-		this.request();
-		request.setBody("2:6");
-		this.request();
-		request.setMethod(HttpMethod.GET);
-		request.setPath("sports");
-		request.clearQueryParams();
-		request.setBody("");
-		this.request();
-		request.setPath("users");
-		this.request();
-		request.setPath("users/1/overage");
-		this.request();
-		request.setPath("users/2/overage");
-		this.request();
+		request.setBody("dos:dos@gmail.com");
+        this.request();
+        
+        //GET
+        request.setMethod(HttpMethod.GET);
+        request.setPath("users");
+        request.clearQueryParams();
+        request.setBody("");
+        this.request();
+        
+        //POST
+        request.setPath("sports");
+        request.setBody("tenis");
+        this.request();
+        request.setBody("tenis");
+        this.request();
+        request.setBody("ajedrez");
+        this.request();
+        
+        //GET
+        request.setMethod(HttpMethod.GET);
+        request.setPath("users/search?sport=tenis");
+        request.clearQueryParams();
+        request.setBody("");
+        this.request();
+//      request.setPath("users");
+//      this.request();
+//      request.setPath("users/1/overage");
+//      this.request();
+//      request.setPath("users/2/overage");
+//      this.request();
+        
+
+//		request.setBody("2:6");
+//		this.request();
+        
+
+		
+		//PUT
+        request.setMethod(HttpMethod.PUT);
+		request.setPath("users/uno/sport");
+        request.setBody("tenis");
+        this.request();
+        request.setPath("users/uno/sport");
+        request.setBody("noDeporte");
+        this.request();
+        request.setPath("users/dos/sport");
+        request.setBody("tenis");
+        this.request();
+        request.setPath("users/dos/sport");
+        request.setBody("ajedres");
+        this.request();
+        
+        
+        
 		//Exceptions
-		request.setPath("noValid");
-		this.request();
-		request.setPath("users/x/overage");
-		this.request();
-		request.setPath("users/99/overage");
-		this.request();
-		request.setMethod(HttpMethod.POST);
-		request.setPath("sports");
-		request.setBody("99:4");
-		this.request();
+//		request.setPath("noValid");
+//		this.request();
+//		request.setPath("users/x/overage");
+//		this.request();
+//		request.setPath("users/99/overage");
+//		this.request();
+//		request.setMethod(HttpMethod.POST);
+//		request.setPath("sports");
+//		request.setBody("99:4");
+//		this.request();
 	}
 
 	public void httpMethod() {
