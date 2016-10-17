@@ -13,7 +13,7 @@ public class SportController {
 	public boolean createSport(String sport) {
 		User user = DaoFactory.getFactory().getUserDao().read(1);
 		if (user != null) {
-			DaoFactory.getFactory().getSportDao().create(new Sport());
+			DaoFactory.getFactory().getSportDao().create(new Sport(sport));
 			return true;
 		} else {
 			return false;
@@ -24,7 +24,7 @@ public class SportController {
 		List<Sport> sports = DaoFactory.getFactory().getSportDao().findAll();
 		SportListWrapper sportListWrapper = new SportListWrapper();
 		for (Sport sport : sports) {
-			sportListWrapper.addSportWrapper(new SportWrapper(sport.getUser().getName(),sport.getValue()));
+			sportListWrapper.addSportWrapper(new SportWrapper(sport.getUser().getName(),sport.getSport()));
 		}
 		return sportListWrapper;
 	}

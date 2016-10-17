@@ -27,12 +27,12 @@ public class UserController {
 		if (DaoFactory.getFactory().getUserDao().read(userId) == null) {
 			return null;
 		}
-		List<Integer> sportValues = DaoFactory.getFactory().getSportDao().findValueByUserId(userId);
-		double total = 0;
-		for (Integer value : sportValues) {
+		List<String> sportValues = DaoFactory.getFactory().getSportDao().findValueByUserId(userId);
+		String total = "";
+		for (String value : sportValues) {
 			total += value;
 		}
-		return new OverageWrapper(total / sportValues.size());
+		return new OverageWrapper();
 	}
 
 }

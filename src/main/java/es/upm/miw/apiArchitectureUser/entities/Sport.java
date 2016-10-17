@@ -4,15 +4,16 @@ public class Sport {
 
     private int id;
 
-    private int value;
+    private String sport;
 
     private User user;
 
-    public Sport() {
+    public Sport(String sport) {
+        this.sport = sport;
     }
 
-    public Sport(int value, User user) {
-        this.value = value;
+    public Sport(String sport, User user) {
+        this.sport = sport;
         this.user = user;
     }
 
@@ -24,9 +25,10 @@ public class Sport {
 		this.id = id;
 	}
 
-	public int getValue() {
-        return value;
-    }
+  public String getSport() {
+  return sport;
+}
+   
 
     public User getUser() {
         return user;
@@ -34,7 +36,7 @@ public class Sport {
 
 	@Override
 	public String toString() {
-		return "Sport [id=" + id + ", value=" + value + ", user=" + user + "]";
+		return "Sport [id=" + id + ", value=" + sport + ", user=" + user + "]";
 	}
 
 }

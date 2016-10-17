@@ -2,12 +2,12 @@ package es.upm.miw.apiArchitectureUser.wrappers;
 
 public class SportWrapper {
 	private String userName;
-	private int sportValue;
+	private String sportValue;
 
 	public SportWrapper() {
 	}
 
-	public SportWrapper(String userName, int sportValue) {
+	public SportWrapper(String userName, String sportValue) {
 		this.userName = userName;
 		this.sportValue = sportValue;
 	}
@@ -20,11 +20,11 @@ public class SportWrapper {
 		this.userName = userName;
 	}
 
-	public int getSportValue() {
+	public String getSportValue() {
 		return sportValue;
 	}
 
-	public void setSportValue(int sportValue) {
+	public void setSportValue(String sportValue) {
 		this.sportValue = sportValue;
 	}
 
