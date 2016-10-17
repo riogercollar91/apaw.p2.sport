@@ -9,30 +9,30 @@ import es.upm.miw.apiArchitectureUser.entities.Sport;
 
 public class SportDaoMemory extends GenericMemoryDao<Sport> implements SportDao {
 
-	public SportDaoMemory() {
-		this.setMap(new HashMap<Integer,Sport>());
-	}
+    public SportDaoMemory() {
+        this.setMap(new HashMap<Integer, Sport>());
+    }
 
-	@Override
-	protected Integer getId(Sport entity) {
-		return entity.getId();
-	}
+    @Override
+    protected Integer getId(Sport entity) {
+        return entity.getId();
+    }
 
-	@Override
-	protected void setId(Sport entity, Integer id) {
-		entity.setId(id);
-	}
+    @Override
+    protected void setId(Sport entity, Integer id) {
+        entity.setId(id);
+    }
 
-	@Override
-	public List<String> findValueByUserId(int userId) {
-		List<Sport> sports = this.findAll();
-		List<String> sportsValue = new ArrayList<String>();
-		for (Sport sport : sports) {
-			if (sport.getUser().getId() == userId) {
-			    sportsValue.add(sport.getSport());
-			}
-		}
-		return sportsValue;
-	}
+    @Override
+    public List<String> findValueByUserId(int userId) {
+        List<Sport> sports = this.findAll();
+        List<String> sportsValue = new ArrayList<String>();
+        for (Sport sport : sports) {
+            if (sport.getUser().getId() == userId) {
+                sportsValue.add(sport.getSport());
+            }
+        }
+        return sportsValue;
+    }
 
 }

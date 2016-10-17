@@ -1,36 +1,37 @@
 package es.upm.miw.apiArchitectureUser.wrappers;
 
 public class UserWrapper {
-	private int id;
-	private String name;
+    private int id;
 
-	public UserWrapper() {
-	}
+    private String name;
 
-	public UserWrapper(int id, String name) {
-		this.setId(id);
-		this.setName(name);
-	}
+    public UserWrapper() {
+    }
 
-	public int getId() {
-		return id;
-	}
+    public UserWrapper(int id, String name) {
+        this.setId(id);
+        this.setName(name);
+    }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	@Override
-	public String toString() {
-		return "{\"id\":" + id + ",\"name\":\"" + name + "\"}";
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "{\"id\":" + id + ",\"name\":\"" + name + "\"}";
+    }
 
 }

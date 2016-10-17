@@ -6,26 +6,27 @@ import es.upm.miw.apiArchitectureUser.daos.UserDao;
 
 public class DaoFactoryMemory extends DaoFactory {
 
-	private UserDao userDao;
-	private SportDao sportDao;
+    private UserDao userDao;
 
-	public DaoFactoryMemory() {
-	}
+    private SportDao sportDao;
 
-	@Override
-	public UserDao getUserDao() {
-		if (userDao == null) {
-		    userDao = new UserDaoMemory();
-		}
-		return userDao;
-	}
+    public DaoFactoryMemory() {
+    }
 
-	@Override
-	public SportDao getSportDao() {
-		if (sportDao == null) {
-		    sportDao = new SportDaoMemory();
-		}
-		return sportDao;
-	}
+    @Override
+    public UserDao getUserDao() {
+        if (userDao == null) {
+            userDao = new UserDaoMemory();
+        }
+        return userDao;
+    }
+
+    @Override
+    public SportDao getSportDao() {
+        if (sportDao == null) {
+            sportDao = new SportDaoMemory();
+        }
+        return sportDao;
+    }
 
 }

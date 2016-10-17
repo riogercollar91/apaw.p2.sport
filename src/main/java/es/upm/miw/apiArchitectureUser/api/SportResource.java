@@ -8,14 +8,14 @@ import es.upm.miw.apiArchitectureUser.wrappers.SportListWrapper;
 
 public class SportResource {
 
-	// POST **/sports   body="sport"
-	public void createSport(String sport) throws InvalidSportException, NotFoundUserIdException {
-	    new SportController().createSport(sport);
-	}
+    // POST **/sports body="sport"
+    public void createSport(String sport) throws InvalidSportException, NotFoundUserIdException {
+        new SportController().createSport(sport);
+    }
 
-	// GET **/sport
-	public SportListWrapper sportList() {
-		return new SportController().sportList();
-	}
+    // GET **/sport
+    public SportListWrapper sportList() {
+        return new SportController().sportList();
+    }
 
 }

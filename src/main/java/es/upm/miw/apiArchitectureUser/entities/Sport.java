@@ -22,21 +22,20 @@ public class Sport {
     }
 
     public void setId(int id) {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-  public String getSport() {
-  return sport;
-}
-   
+    public String getSport() {
+        return sport;
+    }
 
     public User getUser() {
         return user;
     }
 
-	@Override
-	public String toString() {
-		return "Sport [id=" + id + ", value=" + sport + ", user=" + user + "]";
-	}
+    @Override
+    public String toString() {
+        return "Sport [id=" + id + ", value=" + sport + ", user=" + user + "]";
+    }
 
 }

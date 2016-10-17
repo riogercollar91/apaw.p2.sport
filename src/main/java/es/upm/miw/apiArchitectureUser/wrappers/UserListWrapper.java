@@ -4,28 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserListWrapper {
-	List<UserWrapper> userList;
+    List<UserWrapper> userList;
 
-	
-	public UserListWrapper() {
-	    userList = new ArrayList<UserWrapper>();
-	}
+    public UserListWrapper() {
+        userList = new ArrayList<UserWrapper>();
+    }
 
-	public List<UserWrapper> getUserList() {
-		return userList;
-	}
+    public List<UserWrapper> getUserList() {
+        return userList;
+    }
 
-	public void addUserWrapper(UserWrapper userWrapper){
-	    userList.add(userWrapper);
-	}
-	
+    public void addUserWrapper(UserWrapper userWrapper) {
+        userList.add(userWrapper);
+    }
 
-	@Override
-	public String toString() {
-		String result = "{\"userList\":[ ";
-		for (UserWrapper userWrapper : userList) {
-			result += userWrapper.toString() + ",";
-		}
-		return result.substring(0, result.length() - 1) + "]}";
-	}
+    @Override
+    public String toString() {
+        String result = "{\"userList\":[ ";
+        for (UserWrapper userWrapper : userList) {
+            result += userWrapper.toString() + ",";
+        }
+        return result.substring(0, result.length() - 1) + "]}";
+    }
 }

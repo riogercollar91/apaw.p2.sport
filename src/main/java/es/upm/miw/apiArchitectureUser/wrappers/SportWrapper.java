@@ -1,36 +1,37 @@
 package es.upm.miw.apiArchitectureUser.wrappers;
 
 public class SportWrapper {
-	private String userName;
-	private String sportValue;
+    private String userName;
 
-	public SportWrapper() {
-	}
+    private String sportValue;
 
-	public SportWrapper(String userName, String sportValue) {
-		this.userName = userName;
-		this.sportValue = sportValue;
-	}
+    public SportWrapper() {
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public SportWrapper(String userName, String sportValue) {
+        this.userName = userName;
+        this.sportValue = sportValue;
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getSportValue() {
-		return sportValue;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setSportValue(String sportValue) {
-		this.sportValue = sportValue;
-	}
+    public String getSportValue() {
+        return sportValue;
+    }
 
-	@Override
-	public String toString() {
-		return "{\"userName\":\"" + userName + ",\"sportValue\":" + sportValue + "}";
-	}
+    public void setSportValue(String sportValue) {
+        this.sportValue = sportValue;
+    }
+
+    @Override
+    public String toString() {
+        return "{\"userName\":\"" + userName + ",\"sportValue\":" + sportValue + "}";
+    }
 
 }

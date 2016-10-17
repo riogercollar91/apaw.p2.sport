@@ -7,7 +7,7 @@ public class User {
     private int id;
 
     private String name;
-    
+
     private Calendar date;
 
     public User() {
@@ -23,20 +23,20 @@ public class User {
     }
 
     public void setId(int id) {
-		this.id = id;
-	}
+        this.id = id;
+    }
 
-	public String getName() {
+    public String getName() {
         return name;
     }
 
-	public Calendar getDate() {
-		return date;
-	}
+    public Calendar getDate() {
+        return date;
+    }
 
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", date=" + date + "]";
-	}
+    @Override
+    public String toString() {
+        return "User [id=" + id + ", name=" + name + ", date=" + date + "]";
+    }
 
 }
