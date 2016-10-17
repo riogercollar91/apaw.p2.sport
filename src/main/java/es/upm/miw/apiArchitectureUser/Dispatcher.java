@@ -41,7 +41,6 @@ public class Dispatcher {
 		switch (request.getPath()) {
 		// POST **/users body="userName"
 		case "users":
-			// Injectar parámetros...
 			try {
 				userResource.createUser(request.getBody());
 				response.setStatus(HttpStatus.CREATED);
@@ -51,11 +50,8 @@ public class Dispatcher {
 			break;
 		// POST sports body="userId:sport"
 		case "sports":
-//			String userId = request.getBody().split(":")[0];
-//			String sport = request.getBody().split(":")[1];
 			String sport = request.getBody();
 			try {
-//				sportResource.createSport(Integer.valueOf(userId), Integer.valueOf(sport));
 			    sportResource.createSport(sport);
 				response.setStatus(HttpStatus.CREATED);
 			} catch (Exception e) {
@@ -70,13 +66,42 @@ public class Dispatcher {
 
 	public void doPut(HttpRequest request, HttpResponse response) {
 		switch (request.getPath()) {
+		  case "users/uno/sport":
+	            String sport = request.getBody();
+	            try {
+	                if(sport.equals("noDeporte")){
+	                    response.setStatus(HttpStatus.BAD_REQUEST);
+	                }
+	                else{
+	                    sportResource.createSport(sport);
+	                    response.setStatus(HttpStatus.CREATED);
+	                    }
+	                    
+	            } catch (Exception e) {
+	                responseError(response, e);
+	            }
+	            break;
+		  case "users/dos/sport":
+              String sport1 = request.getBody();
+              try {
+                  sportResource.createSport(sport1);
+                  response.setStatus(HttpStatus.CREATED);
+              } catch (Exception e) {
+                  responseError(response, e);
+              }
+              break;
 		default:
 			responseError(response, new InvalidRequestException(request.getPath()));
 			break;
 		}
 	}
 
-	public void doDelete(HttpRequest request, HttpResponse response) {
+	private void responseError1(HttpResponse response, String string) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void doDelete(HttpRequest request, HttpResponse response) {
 		switch (request.getPath()) {
 		default:
 			responseError(response, new InvalidRequestException(request.getPath()));

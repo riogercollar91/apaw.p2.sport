@@ -29,7 +29,7 @@ public class ApiArchitectureMain {
 		this.request();
 		request.setBody("dos:dos@gmail.com");
 		this.request();
-		request.setBody("dos:dos@gmail.com");
+		request.setBody("uno:tres@gmail.com");
         this.request();
         
         //GET

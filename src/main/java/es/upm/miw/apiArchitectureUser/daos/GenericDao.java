@@ -14,6 +14,6 @@ public interface GenericDao<T, ID> {
 
     List<T> findAll();
 
-    List<Integer> findValueByUserId(int userId);
+    List<String> findValueByUserId(int userId);
 
 }

@@ -46,7 +46,7 @@ public abstract class GenericMemoryDao<T> implements GenericDao<T, Integer> {
 
 	protected abstract void setId(T entity, Integer id);
 
-    public List<Integer> findValueByUserId(int userId) {
+    public List<String> findValueByUserId(int userId) {
         // TODO Auto-generated method stub
         return null;
     }

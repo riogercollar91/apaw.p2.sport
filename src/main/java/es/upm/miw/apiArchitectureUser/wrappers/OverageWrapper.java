@@ -6,6 +6,9 @@ public class OverageWrapper {
 	public OverageWrapper(double overage) {
 		this.setOverage(overage);
 	}
+	public OverageWrapper() {
+        this.setOverage(overage);
+    }
 
 	public double getOverage() {
 		return overage;
